@@ -8,9 +8,10 @@ export default function PlacesList(props) {
   );
 
   const convertHours = (hoursObj) => {
-    let formattedHours = "";
+    let formattedHours = [];
     for (const key in hoursObj) {
-      formattedHours += key + ": " + hoursObj[key] + " \n";
+      formattedHours.push(key + ": " + hoursObj[key]);
+      console.log(formattedHours);
     }
     return formattedHours;
   };
@@ -27,7 +28,8 @@ export default function PlacesList(props) {
         <li>Business Name: {currentBusiness.name}</li>
         <li>Address: {currentBusiness.address}</li>
         <li>Website: {currentBusiness.website_url}</li>
-        <li>Hours: {hours}</li>
+        <li>Hours: </li>
+        {hours}
       </ul>
     </div>
   );
