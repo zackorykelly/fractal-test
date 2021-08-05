@@ -6,10 +6,12 @@ export default function PlacesList(props) {
     if (business) {
       return (
         <div>
-          {business.id}
-          <Link to={`/places/${business.id}`}>{business.name}</Link>
-          {business.website_url}
-          {business.address}
+          <span>{business.id}</span>
+          <span>
+            <Link to={`/places/${business.id}`}>{business.name}</Link>
+          </span>
+          <span>{business.website_url}</span>
+          <span>{business.address}</span>
         </div>
       );
     }
